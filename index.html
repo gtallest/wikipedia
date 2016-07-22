@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wikipedia Viewer Project - Marc D. Wong - Free Code Camp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/wikipedia.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+      <div class="row">
+
+        <div id="viewer" class="col-md-offset-4 col-md-4 text-center">
+        <form id="search">
+          <input type="text" placeholder="search wikipedia" id="search-term" autocomplete="off"></input><div id="clear-x">x</div>
+          </form>
+        <a href="https://en.wikipedia.org/wiki/Special:Random" class="btn btn-danger" target="_blank" id="random">Random</a>
+        <div id="spin-load"> | </div>
+        </div>
+
+
+      </div>
+      <div id="results-row" class="row" style="display:none;">
+        <div class="col-md-offset-2 col-md-8 text-center">
+
+          <span>You searched for: <span id="term-searched"></span></span>
+          <ul id="results-list">
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/wikipedia.js"></script>
+
+</body>
+</html>

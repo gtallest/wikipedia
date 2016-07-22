@@ -1,0 +1,94 @@
+body {
+  background-color:#333;
+  font-family:monospace;
+  color:white;
+  font-size:20px;
+}
+
+#viewer {
+  margin-top:80px;
+}
+#search {
+  display:inline-block;
+  overflow:hidden;
+  position:relative;
+  transition:0.3s;
+}
+#random {
+  display:inline-block;
+  position:relative;
+  top:-10px;
+}
+
+#search input {
+  overflow:hidden;
+  background:none;
+  color:white;
+  outline:0;
+  border:none;
+  border-radius:10px;
+  position:relative;
+  display:inline-block;
+  transition:0.3s;
+  padding-left:5px;
+}
+
+#clear-x {
+  display:inline-block; position:absolute;
+  color:#333;
+  cursor:pointer;
+  right:-10px;
+  transition:0.3s;
+}
+
+#search input:focus {
+  background:white;
+  color:#333;
+  border:radius:10px;
+  transition:0.5s;
+}
+
+#search input:focus + #clear-x{
+  right:5px;
+  transition:0.5s
+}
+
+#results-row {
+  margin-top:45px;
+}
+
+#results-list li {
+  list-style-type:none;
+  background-color:gray;
+  color:#333;
+  border-left:3px solid #ff3030;
+  margin-bottom:10px;
+  padding:10px;
+  text-align:left;
+  text-decoration:none;
+  transition:0.5s;
+}
+#results-list li:hover {
+  background-color:white;
+  border-left-width:15px;
+  transition:0.5s;
+}
+#results-list a:hover {
+  text-decoration:none;
+}
+
+#spin-load {
+  display:none;
+  animation: spin-load 2s linear infinite;
+  position:absolute;
+  left:50%;
+}
+
+@keyframes spin-load {
+  0% {transform:rotate(0deg);
+  color:white;}
+  50% {transform:rotate(180deg);
+  color:#ff3030;}
+  100% {transform:rotate(360deg);
+  color:white;}
+}
